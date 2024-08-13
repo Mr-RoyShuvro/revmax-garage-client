@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/logo.svg'
+import logo from '../../../assets/logo.png'
 
 const Navbar = () => {
 
@@ -13,7 +13,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 h-16 mb-10">
+        <div className="navbar h-16 mb-10 pt-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,21 +32,24 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-600 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[#444] text-base font-semibold">
                         {navItems}
                     </ul>
                 </div>
-                <Link className="btn btn-ghost text-xl">
-                    <img className='h-16' src={logo} alt="" />
+                <Link to="/" className="btn btn-ghost h-20">
+                    <div className='flex flex-col items-center'>
+                        <img className='h-11 w-16' src={logo} alt="" />
+                        <h3 className='text-[#444] font-bold text-lg'>RevMax Garage</h3>
+                    </div>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 text-[#444] text-base font-semibold">
                     {navItems}
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn btn-outline btn-error">Appointment</button>
+                <button className="btn btn-outline text-[#FF3811] text-base font-normal hover:bg-[#FF3811] hover:text-white hover:border-none">Appointment</button>
             </div>
         </div>
     );
