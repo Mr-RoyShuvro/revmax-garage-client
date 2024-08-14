@@ -30,7 +30,7 @@ const Banner = () => {
                         <GoArrowLeft></GoArrowLeft>
                     </a>
                     <a href="#slide2" className="btn rounded-full border-none text-2xl text-white bg-[#FF3811] h-14 w-14 hover:bg-[rgb(199,49,19)]">
-                        <GoArrowRight className=''></GoArrowRight>
+                        <GoArrowRight></GoArrowRight>
                     </a>
                 </div>
             </div>
@@ -54,7 +54,7 @@ const Banner = () => {
                         <GoArrowLeft></GoArrowLeft>
                     </a>
                     <a href="#slide3" className="btn rounded-full border-none text-2xl text-white bg-[#FF3811] h-14 w-14 hover:bg-[rgb(199,49,19)]">
-                        <GoArrowRight className=''></GoArrowRight>
+                        <GoArrowRight></GoArrowRight>
                     </a>
                 </div>
             </div>
@@ -78,7 +78,7 @@ const Banner = () => {
                         <GoArrowLeft></GoArrowLeft>
                     </a>
                     <a href="#slide4" className="btn rounded-full border-none text-2xl text-white bg-[#FF3811] h-14 w-14 hover:bg-[rgb(199,49,19)]">
-                        <GoArrowRight className=''></GoArrowRight>
+                        <GoArrowRight></GoArrowRight>
                     </a>
                 </div>
             </div>
@@ -102,7 +102,7 @@ const Banner = () => {
                         <GoArrowLeft></GoArrowLeft>
                     </a>
                     <a href="#slide5" className="btn rounded-full border-none text-2xl text-white bg-[#FF3811] h-14 w-14 hover:bg-[rgb(199,49,19)]">
-                        <GoArrowRight className=''></GoArrowRight>
+                        <GoArrowRight></GoArrowRight>
                     </a>
                 </div>
             </div>
@@ -126,7 +126,7 @@ const Banner = () => {
                         <GoArrowLeft></GoArrowLeft>
                     </a>
                     <a href="#slide6" className="btn rounded-full border-none text-2xl text-white bg-[#FF3811] h-14 w-14 hover:bg-[rgb(199,49,19)]">
-                        <GoArrowRight className=''></GoArrowRight>
+                        <GoArrowRight></GoArrowRight>
                     </a>
                 </div>
             </div>
@@ -150,7 +150,7 @@ const Banner = () => {
                         <GoArrowLeft></GoArrowLeft>
                     </a>
                     <a href="#slide1" className="btn rounded-full border-none text-2xl text-white bg-[#FF3811] h-14 w-14 hover:bg-[rgb(199,49,19)]">
-                        <GoArrowRight className=''></GoArrowRight>
+                        <GoArrowRight></GoArrowRight>
                     </a>
                 </div>
             </div>
