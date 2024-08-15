@@ -5,9 +5,9 @@ import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
-const Login = () => {
+const SignUp = () => {
 
-    const handleLogIn = e =>{
+    const handleLogOut = e =>{
         e.preventDefault();
         const form = e.target;
         const email = form.value.email;
@@ -22,11 +22,17 @@ const Login = () => {
                     <img src={img} alt="" />
                 </div>
                 <div className="rounded-lg w-1/2 shrink-0 px-20 border-2 border-[#D0D0D0] max-w-xl mr-20">
-                    <form onSubmit={handleLogIn}>
-                        <h1 className="text-4xl font-semibold text-[#444] text-center pt-12 pb-10">Login</h1>
+                    <form onSubmit={handleLogOut}>
+                        <h1 className="text-4xl font-semibold text-[#444] text-center pt-12 pb-10">Sign Up</h1>
                         <div className="form-control">
                             <label className="label">
-                                <span className="text-lg font-semibold text-[#444] pb-5">Email</span>
+                                <span className="text-lg font-semibold text-[#444] pb-5">Name</span>
+                            </label>
+                            <input name='name' type="text" placeholder="Your Name" className="input input-bordered bg-white" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="text-lg font-semibold text-[#444] pb-5 pt-7">Email</span>
                             </label>
                             <input name='email' type="email" placeholder="Your email" className="input input-bordered bg-white" required />
                         </div>
@@ -37,7 +43,7 @@ const Login = () => {
                             <input name='password' type="password" placeholder="Your password" className="input input-bordered bg-white" required />
                         </div>
                         <div className="form-control pt-7">
-                            <button className="btn bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Sign In</button>
+                            <button className="btn bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Sign Up</button>
                         </div>
                         <h3 className='text-center text-[#444] text-lg font-medium py-6'>Or Sign In with</h3>
                         <div className='flex gap-4 justify-center'>
@@ -51,7 +57,7 @@ const Login = () => {
                                 <FaLinkedinIn className='text-2xl text-[#0A66C2]'></FaLinkedinIn>
                             </div>
                         </div>
-                        <h4 className='text-[#737373] text-lg font-normal text-center pt-8 pb-10'>Don't have an account? <Link to="/logout"><span className='text-[#FF3811] font-bold'>Sign Up</span></Link></h4>
+                        <h4 className='text-[#737373] text-lg font-normal text-center pt-8 pb-10'>Already have an account? <Link to="/login"><span className='text-[#FF3811] font-bold'>Sign In</span></Link></h4>
                     </form>
                 </div>
             </div>
@@ -59,4 +65,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignUp;
