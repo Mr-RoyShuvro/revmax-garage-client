@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img from '../../../assets/images/login/login.svg'
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const SignUp = () => {
 
-    const handleLogOut = e =>{
+    const { createUser } = useContext(AuthContext);
+
+    const handleLogOut = e => {
         e.preventDefault();
         const form = e.target;
-        const email = form.value.email;
-        const password = form.value.password;
-        console.log(email, password);
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, email, password);
+
+        /* Create User */
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
 
     return (

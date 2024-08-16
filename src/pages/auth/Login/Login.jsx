@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img from '../../../assets/images/login/login.svg'
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 
 const Login = () => {
 
+    const {signIn} = useContext(AuthContext);
+
     const handleLogIn = e =>{
         e.preventDefault();
         const form = e.target;
-        const email = form.value.email;
-        const password = form.value.password;
+        const email = form.email.value;
+        const password = form.password.value;
         console.log(email, password);
+
+        /* Sign in */
+        signIn(email, password)
+        .then(result =>{
+            const user = result.user;
+        })
+        .catch(error=>{
+            console.log(error);
+        })
     }
 
     return (
@@ -51,7 +63,7 @@ const Login = () => {
                                 <FaLinkedinIn className='text-2xl text-[#0A66C2]'></FaLinkedinIn>
                             </div>
                         </div>
-                        <h4 className='text-[#737373] text-lg font-normal text-center pt-8 pb-10'>Don't have an account? <Link to="/logout"><span className='text-[#FF3811] font-bold'>Sign Up</span></Link></h4>
+                        <h4 className='text-[#737373] text-lg font-normal text-center pt-8 pb-10'>Don't have an account? <Link to="/signout"><span className='text-[#FF3811] font-bold'>Sign Up</span></Link></h4>
                     </form>
                 </div>
             </div>
