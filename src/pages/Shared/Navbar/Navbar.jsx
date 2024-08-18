@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png'
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
 
     const navItems = <>
         <li><Link to="/">Home</Link></li>
@@ -11,6 +14,16 @@ const Navbar = () => {
         <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/contact">Contact</Link></li>
     </>
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                console.log('Sign out successfully');
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
 
     return (
         <div className="navbar h-16 mb-10 pt-10">
@@ -49,7 +62,19 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn btn-outline text-[#FF3811] text-base font-normal hover:bg-[#FF3811] hover:text-white hover:border-none">Appointment</button>
+                {
+                    user ?
+                        <>
+                            <Link to="/bookings">
+                                <button className="btn mr-3 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">My Bookings</button>
+                            </Link>
+                            <button onClick={handleLogOut} className="btn mr-3 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Sign Out</button>
+                        </>
+                        : <Link to="/login">
+                            <button className="btn mr-3 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Sign in</button>
+                        </Link>
+                }
+                <button className="btn btn-outline text-[#FF3811] text-base font-normal hover:bg-[#FF3811] hover:text-white hover:border-transparent">Appointment</button>
             </div>
         </div>
     );
