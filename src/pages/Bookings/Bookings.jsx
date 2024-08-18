@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import BookingRow from './BookingRow';
 import Swal from 'sweetalert2';
+import BookingBanner from './BookingBanner';
 
 const Bookings = () => {
 
@@ -81,35 +82,18 @@ const Bookings = () => {
 
     return (
         <div>
-            <h3>{bookings.length}</h3>
-            <div className="overflow-x-auto max-w-5xl mx-auto">
-                <table className="table">
-                    {/* head */}
-                    <thead className='bg-gray-300'>
-                        <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th>
-                            <th className='font-bold text-[#444] text-xl'>Service Details</th>
-                            <th className='font-bold text-[#444] text-xl'>Price</th>
-                            <th className='font-bold text-[#444] text-xl'>Booking Date</th>
-                            <th className='font-bold text-[#444] text-xl'>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {/* row 1 */}
-                        {
-                            bookings.map(booking => <BookingRow key={booking._id}
-                                handleDelete={handleDelete}
-                                handleBookingConfirm={handleBookingConfirm}
-                                booking={booking}>
-                            </BookingRow>)
-                        }
-                    </tbody>
-                </table>
+            <BookingBanner></BookingBanner>
+            <div className="overflow-x-auto max-w-6xl mx-auto pt-20 pb-32 ">
+                <div className='bg-gray-100 rounded-lg'>
+                    {/* row 1 */}
+                    {
+                        bookings.map(booking => <BookingRow key={booking._id}
+                            handleDelete={handleDelete}
+                            handleBookingConfirm={handleBookingConfirm}
+                            booking={booking}>
+                        </BookingRow>)
+                    }
+                </div>
             </div>
         </div>
     );
