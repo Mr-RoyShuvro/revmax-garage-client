@@ -47,12 +47,37 @@ const Bookings = () => {
                             const remaining = bookings.filter(booking => booking._id !== id)
                             setBookings(remaining);
                         }
-
                     })
             }
         });
     }
 
+    /* Update pending booking to confirmed */
+    const handleBookingConfirm = id => {
+        fetch(`http://localhost:5000/bookings/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ status: 'confirm' })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: "Confirmed!",
+                        text: "Your booking has been Confirmed.",
+                        icon: "success"
+                    });
+                    const remaining = bookings.filter(booking => booking._id !== id);
+                    const updated = bookings.find(booking => booking._id === id);
+                    updated.status = 'confirm';
+                    const newBookings = [updated, ...remaining];
+                    setBookings(newBookings);
+                }
+            })
+    }
 
     return (
         <div>
@@ -77,7 +102,11 @@ const Bookings = () => {
                     <tbody>
                         {/* row 1 */}
                         {
-                            bookings.map(booking => <BookingRow key={booking._id} handleDelete={handleDelete} booking={booking}></BookingRow>)
+                            bookings.map(booking => <BookingRow key={booking._id}
+                                handleDelete={handleDelete}
+                                handleBookingConfirm={handleBookingConfirm}
+                                booking={booking}>
+                            </BookingRow>)
                         }
                     </tbody>
                 </table>
