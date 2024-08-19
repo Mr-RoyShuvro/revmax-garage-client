@@ -2,12 +2,12 @@ import React from 'react';
 import img from '../../assets/images/checkout/checkout.png'
 
 
-const CheckOutBanner = () => {
+const CheckOutBanner = ({title}) => {
     return (
         <div className='relative flex'>
             <img className='w-full' src={img} alt="" />
             <div className='absolute bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] w-full h-full rounded-xl'>
-                <h3 className='text-3xl md:text-5xl font-bold text-white pl-3 md:pl-28 pt-1 md:pt-32'>Check Out</h3>
+                <h3 className='text-3xl md:text-5xl font-bold text-white pl-3 md:pl-28 pt-1 md:pt-32'>{title}</h3>
                 <div
                     className="text-base border-none text-white font-semibold relative mx-auto pt-3 md:pt-[101px]"
                     style={{

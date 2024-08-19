@@ -66,15 +66,15 @@ const Navbar = () => {
                     user ?
                         <>
                             <Link to="/bookings">
-                                <button className="btn mr-3 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">My Bookings</button>
+                                <button className="btn mr-3 btn-outline text-[#FF3811]  font-bold hover:bg-[#FF3811] hover:text-white hover:border-transparent btn-sm">My Bookings</button>
                             </Link>
-                            <button onClick={handleLogOut} className="btn mr-3 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Sign Out</button>
+                            <button onClick={handleLogOut} className="btn mr-3 bg-[#FF3811]  border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none btn-sm">Sign Out</button>
                         </>
                         : <Link to="/login">
-                            <button className="btn mr-3 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Sign in</button>
+                            <button className="btn mr-3 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none btn-sm">Sign in</button>
                         </Link>
                 }
-                <button className="btn btn-outline text-[#FF3811] text-base font-normal hover:bg-[#FF3811] hover:text-white hover:border-transparent">Appointment</button>
+                {/* <button className="btn btn-outline text-[#FF3811]  font-normal hover:bg-[#FF3811] hover:text-white hover:border-transparent btn-sm">Appointment</button> */}
             </div>
         </div>
     );

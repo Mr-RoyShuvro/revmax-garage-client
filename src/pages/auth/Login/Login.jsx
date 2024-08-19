@@ -2,39 +2,51 @@ import React, { useContext } from 'react';
 import img from '../../../assets/images/login/login.svg'
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import axios from 'axios';
 
 
 const Login = () => {
 
-    const {signIn, googleSignIn} = useContext(AuthContext);
+    const { signIn, googleSignIn } = useContext(AuthContext);
 
-    const handleLogIn = e =>{
+    const location = useLocation();
+    // console.log(location);
+    const navigate = useNavigate();
+
+    const handleLogIn = e => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
 
         /* Sign in */
         signIn(email, password)
-        .then(result =>{
-            const user = result.user;
-        })
-        .catch(error=>{
-            console.log(error);
-        })
+            .then(result => {
+                const loggedInUser = result.user;
+                const user = { email };
+                // navigate(location?.state ? location?.state : "/");
+                /* Get access token */
+                axios.post('http://localhost:5000/jwt', user)
+                .then(data=>{
+                    console.log(data.data);
+                })
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
-    const handleGoogleSignIn = () =>{
+    const handleGoogleSignIn = () => {
         googleSignIn()
-        .then(result =>{
-            console.log(result.user);
-        })
-        .catch(error=>{
-            console.error(error);
-        })
+            .then(result => {
+                console.log(result.user);
+                navigate(location?.state ? location?.state : "/");
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
 
     return (

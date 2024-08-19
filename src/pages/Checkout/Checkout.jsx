@@ -57,7 +57,7 @@ const Checkout = () => {
 
     return (
         <div>
-            <CheckOutBanner></CheckOutBanner>
+            <CheckOutBanner title={title}></CheckOutBanner>
             <div className="hero min-h-screen py-32">
                 <div className="card bg-[#F3F3F3] w-full shrink-0 py-10 md:py-28 px-5 md:px-32 max-w-sm md:max-w-5xl">
                     <form onSubmit={handleCheckOut}>

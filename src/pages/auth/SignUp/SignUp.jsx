@@ -2,14 +2,17 @@ import React, { useContext } from 'react';
 import img from '../../../assets/images/login/login.svg'
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const SignUp = () => {
 
     const { createUser } = useContext(AuthContext);
 
-    const handleLogOut = e => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleSignUp = e => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -22,6 +25,8 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                /* Navigate user */
+                navigate(location?.pathname ? location?.pathname : "/");
             })
             .catch(error => {
                 console.error(error);
@@ -35,7 +40,7 @@ const SignUp = () => {
                     <img src={img} alt="" />
                 </div>
                 <div className="rounded-lg w-1/2 shrink-0 px-20 border-2 border-[#D0D0D0] max-w-xl mr-20">
-                    <form onSubmit={handleLogOut}>
+                    <form onSubmit={handleSignUp}>
                         <h1 className="text-4xl font-semibold text-[#444] text-center pt-12 pb-10">Sign Up</h1>
                         <div className="form-control">
                             <label className="label">
