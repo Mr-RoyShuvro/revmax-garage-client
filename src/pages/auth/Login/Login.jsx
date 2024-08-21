@@ -26,12 +26,15 @@ const Login = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 const user = { email };
-                // navigate(location?.state ? location?.state : "/");
+
                 /* Get access token */
-                axios.post('http://localhost:5000/jwt', user)
-                .then(data=>{
-                    console.log(data.data);
-                })
+                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
+                    .then(data => {
+                        console.log(data.data);
+                        if (data.data.success) {
+                            navigate(location?.state ? location?.state : "/");
+                        }
+                    })
             })
             .catch(error => {
                 console.log(error);

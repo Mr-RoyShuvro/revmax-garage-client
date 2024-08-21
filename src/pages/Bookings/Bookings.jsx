@@ -3,6 +3,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import BookingRow from './BookingRow';
 import Swal from 'sweetalert2';
 import BookingBanner from './BookingBanner';
+import axios from 'axios';
 
 const Bookings = () => {
 
@@ -11,14 +12,21 @@ const Bookings = () => {
     const url = `http://localhost:5000/bookings?email=${user?.email}`;
 
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setBookings(data);
-            })
-    }, []);
 
+        axios.get(url, {withCredentials: true})
+        .then(data=> {
+            setBookings(data.data);
+        })
+
+        // fetch(url)
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        //         setBookings(data);
+        //     })
+
+
+    }, []);
 
     const handleDelete = id => {
         Swal.fire({
