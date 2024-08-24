@@ -13,7 +13,7 @@ const Bookings = () => {
     const axiosSecure = UseAxiosSecure();
 
 
-    // const url = `https://revmax-garage-server-1.onrender.com/bookings?email=${user?.email}`;
+    // const url = `http://localhost:5000/bookings?email=${user?.email}`;
     const url = `/bookings?email=${user?.email}`;
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const Bookings = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://revmax-garage-server-1.onrender.com/bookings/${id}`, {
+                fetch(`http://localhost:5000/bookings/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -64,7 +64,7 @@ const Bookings = () => {
 
     /* Update pending booking to confirmed */
     const handleBookingConfirm = id => {
-        fetch(`https://revmax-garage-server-1.onrender.com/bookings/${id}`, {
+        fetch(`http://localhost:5000/bookings/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
