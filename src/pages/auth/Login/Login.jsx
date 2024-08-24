@@ -24,17 +24,19 @@ const Login = () => {
         /* Sign in */
         signIn(email, password)
             .then(result => {
-                const loggedInUser = result.user;
-                const user = { email };
+                console.log(result.user);
+                navigate(location?.state ? location?.state : "/");
 
-                /* Get access token */
-                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
-                    .then(data => {
-                        console.log(data.data);
-                        if (data.data.success) {
-                            navigate(location?.state ? location?.state : "/");
-                        }
-                    })
+                // const user = { email };
+
+                // /* Get access token */
+                // axios.post('https://revmax-garage-server-1.onrender.com/jwt', user, { withCredentials: true })
+                //     .then(data => {
+                //         console.log(data.data);
+                //         if (data.data.success) {
+                //             navigate(location?.state ? location?.state : "/");
+                //         }
+                //     })
             })
             .catch(error => {
                 console.log(error);

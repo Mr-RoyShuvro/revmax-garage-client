@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../firebase/firebase.config';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import axios from 'axios';
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -16,25 +17,43 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const signIn = (email, password)=>{
+    const signIn = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    const googleSignIn = () =>{
+    const googleSignIn = () => {
         setLoading(true);
         return signInWithPopup(auth, provider);
     }
 
-    const logOut = () =>{
+    const logOut = () => {
         setLoading(true);
         return signOut(auth);
     }
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            
+            // if user exists, then issue a token
+            const userEmail = currentUser?.email || user?.email;
+            const loggedUser = { email: userEmail };
+
             setUser(currentUser);
             setLoading(false);
+
+            if (currentUser) {
+                axios.post("https://revmax-garage-server-1.onrender.com/jwt", loggedUser, { withCredentials: true })
+                    .then(data => {
+                        console.log('Token response', data.data);
+                    })
+            }
+            else {
+                axios.post("https://revmax-garage-server-1.onrender.com/logout", loggedUser, {withCredentials: true})
+                .then(data=>{
+                    console.log(data.data);
+                })
+            }
         });
         return () => {
             return unSubscribe();

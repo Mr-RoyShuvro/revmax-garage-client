@@ -3,29 +3,30 @@ import { AuthContext } from '../../providers/AuthProvider';
 import BookingRow from './BookingRow';
 import Swal from 'sweetalert2';
 import BookingBanner from './BookingBanner';
-import axios from 'axios';
+// import axios from 'axios';
+import UseAxiosSecure from '../../hooks/UseAxiosSecure';
 
 const Bookings = () => {
 
     const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
-    const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    const axiosSecure = UseAxiosSecure();
+
+
+    // const url = `https://revmax-garage-server-1.onrender.com/bookings?email=${user?.email}`;
+    const url = `/bookings?email=${user?.email}`;
 
     useEffect(() => {
 
-        axios.get(url, {withCredentials: true})
-        .then(data=> {
-            setBookings(data.data);
-        })
+        axiosSecure.get(url)
+            .then(data => {
+                setBookings(data.data);
+            })
 
-        // fetch(url)
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         setBookings(data);
-        //     })
-
-
+        // axios.get(url, {withCredentials: true})
+        // .then(data=> {
+        //     setBookings(data.data);
+        // })
     }, []);
 
     const handleDelete = id => {
@@ -40,7 +41,7 @@ const Bookings = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/bookings/${id}`, {
+                fetch(`https://revmax-garage-server-1.onrender.com/bookings/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -63,7 +64,7 @@ const Bookings = () => {
 
     /* Update pending booking to confirmed */
     const handleBookingConfirm = id => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://revmax-garage-server-1.onrender.com/bookings/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
