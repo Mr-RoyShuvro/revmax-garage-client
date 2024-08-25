@@ -41,7 +41,6 @@ const Features = () => {
                     <h3 className="text-[#444] text-lg font-bold pt-5 group-hover:text-white">Expert Team</h3>
                 </div>
             </div>
-
         </div>
     );
 };
