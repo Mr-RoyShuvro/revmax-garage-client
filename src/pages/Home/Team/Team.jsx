@@ -40,8 +40,6 @@ const Team = () => {
                 </p>
             </div>
 
-
-
             <Carousel
                 additionalTransfrom={0}
                 swipeable={false}
