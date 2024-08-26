@@ -34,7 +34,7 @@ const Checkout = () => {
 
         console.log(booking);
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://revmax-garage-server-1.onrender.com/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

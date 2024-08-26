@@ -21,7 +21,7 @@ const Banner = () => {
                     className="w-full rounded-xl" />
                 <div className="absolute flex items-center rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] w-full h-full">
                     <div className='space-y-7 pl-2 md:pl-24'>
-                        <div data-aos="fade-right">
+                        <div className='space-y-7' data-aos="fade-right">
                             <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
                             <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
                         </div>

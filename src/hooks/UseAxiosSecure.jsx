@@ -4,7 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://revmax-garage-server-1.onrender.com',
     withCredentials: true
 });
 

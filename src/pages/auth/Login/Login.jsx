@@ -30,7 +30,7 @@ const Login = () => {
                 // const user = { email };
 
                 // /* Get access token */
-                // axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
+                // axios.post('https://revmax-garage-server-1.onrender.com/jwt', user, { withCredentials: true })
                 //     .then(data => {
                 //         console.log(data.data);
                 //         if (data.data.success) {

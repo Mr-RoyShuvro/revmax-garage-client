@@ -43,13 +43,13 @@ const AuthProvider = ({ children }) => {
             setLoading(false);
 
             if (currentUser) {
-                axios.post("http://localhost:5000/jwt", loggedUser, { withCredentials: true })
+                axios.post("https://revmax-garage-server-1.onrender.com/jwt", loggedUser, { withCredentials: true })
                     .then(data => {
                         console.log('Token response', data.data);
                     })
             }
             else {
-                axios.post("http://localhost:5000/logout", loggedUser, {withCredentials: true})
+                axios.post("https://revmax-garage-server-1.onrender.com/logout", loggedUser, {withCredentials: true})
                 .then(data=>{
                     console.log(data.data);
                 })
