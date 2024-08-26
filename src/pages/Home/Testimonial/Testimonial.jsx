@@ -9,6 +9,10 @@ import client3 from '../../../assets/images/testimonial/3.png'
 import client4 from '../../../assets/images/testimonial/4.jpg'
 import client5 from '../../../assets/images/testimonial/5.png'
 import { Rating } from "@mui/material";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Testimonial = () => {
     var settings = {
@@ -44,11 +48,15 @@ const Testimonial = () => {
     return (
         <div className='pb-32'>
             <div className='text-center mb-12'>
-                <h3 className='text-[#FF3811] text-xl font-bold pb-5'>Testimonial</h3>
-                <h4 className='text-[#151515] text-5xl font-bold pb-5'>What Customer Says</h4>
-                <p className='text-[#737373] text-base font-normal mb-10'>
-                    The majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable.
-                </p>
+                <div data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500">
+                    <h3 className='text-[#FF3811] text-xl font-bold pb-5'>Testimonial</h3>
+                    <h4 className='text-[#151515] text-5xl font-bold pb-5'>What Customer Says</h4>
+                    <p className='text-[#737373] text-base font-normal mb-10'>
+                        The majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable.
+                    </p>
+                </div>
                 <div className="slider-container">
                     <Slider {...settings}>
                         {/* Testimonial-1 */}

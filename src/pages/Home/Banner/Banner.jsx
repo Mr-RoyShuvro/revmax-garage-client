@@ -6,7 +6,10 @@ import img4 from '../../../assets/images/banner/4.jpg'
 import img5 from '../../../assets/images/banner/5.jpg'
 import img6 from '../../../assets/images/banner/6.jpg'
 import { Link } from 'react-router-dom'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Banner = () => {
     return (
@@ -18,8 +21,10 @@ const Banner = () => {
                     className="w-full rounded-xl" />
                 <div className="absolute flex items-center rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] w-full h-full">
                     <div className='space-y-7 pl-24'>
-                        <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
-                        <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        <div data-aos="fade-right">
+                            <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
+                            <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        </div>
                         <div>
                             <Link to="/servicessection">
                                 <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
@@ -46,8 +51,10 @@ const Banner = () => {
                     className="w-full rounded-xl" />
                 <div className="absolute flex items-center rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] w-full h-full">
                     <div className='space-y-7 pl-24'>
-                        <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
-                        <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        <div data-aos="fade-right">
+                            <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
+                            <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        </div>
                         <div>
                             <Link to="/servicessection">
                                 <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
@@ -74,8 +81,10 @@ const Banner = () => {
                     className="w-full rounded-xl" />
                 <div className="absolute flex items-center rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] w-full h-full">
                     <div className='space-y-7 pl-24'>
-                        <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
-                        <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        <div data-aos="fade-right">
+                            <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
+                            <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        </div>
                         <div>
                             <Link to="/servicessection">
                                 <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
@@ -100,8 +109,10 @@ const Banner = () => {
                     className="w-full rounded-xl" />
                 <div className="absolute flex items-center rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] w-full h-full">
                     <div className='space-y-7 pl-24'>
-                        <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
-                        <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        <div data-aos="fade-right">
+                            <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
+                            <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        </div>
                         <div>
                             <Link to="/servicessection">
                                 <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
@@ -128,8 +139,10 @@ const Banner = () => {
                     className="w-full rounded-xl" />
                 <div className="absolute flex items-center rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] w-full h-full">
                     <div className='space-y-7 pl-24'>
-                        <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
-                        <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        <div data-aos="fade-right">
+                            <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
+                            <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        </div>
                         <div>
                             <Link to="/servicessection">
                                 <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
@@ -156,8 +169,10 @@ const Banner = () => {
                     className="w-full rounded-xl" />
                 <div className="absolute flex items-center rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] w-full h-full">
                     <div className='space-y-7 pl-24'>
-                        <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
-                        <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        <div data-aos="fade-right">
+                            <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
+                            <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
+                        </div>
                         <div>
                             <Link to="/servicessection">
                                 <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>

@@ -9,7 +9,9 @@ import img5 from '../../../assets/images/team/5.png'
 import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { AiFillTwitterCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const responsive = {
     desktop: {
@@ -32,14 +34,16 @@ const responsive = {
 const Team = () => {
     return (
         <div className='pb-32'>
-            <div className='text-center mb-12'>
-                <h3 className='text-[#FF3811] text-xl font-bold pb-5'>Team</h3>
-                <h4 className='text-[#151515] text-5xl font-bold pb-5'>Meet Our Team</h4>
-                <p className='text-[#737373] text-base font-normal'>
-                    The majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable.
-                </p>
-            </div>
+            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 
+                <div className='text-center mb-12'>
+                    <h3 className='text-[#FF3811] text-xl font-bold pb-5'>Team</h3>
+                    <h4 className='text-[#151515] text-5xl font-bold pb-5'>Meet Our Team</h4>
+                    <p className='text-[#737373] text-base font-normal'>
+                        The majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable.
+                    </p>
+                </div>
+            </div>
             <Carousel
                 additionalTransfrom={0}
                 swipeable={false}
