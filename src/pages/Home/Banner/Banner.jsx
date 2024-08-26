@@ -5,6 +5,7 @@ import img3 from '../../../assets/images/banner/3.jpg'
 import img4 from '../../../assets/images/banner/4.jpg'
 import img5 from '../../../assets/images/banner/5.jpg'
 import img6 from '../../../assets/images/banner/6.jpg'
+import { Link } from 'react-router-dom'
 
 
 const Banner = () => {
@@ -20,8 +21,12 @@ const Banner = () => {
                         <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
                         <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
                         <div>
-                            <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
-                            <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Project</button>
+                            <Link to="/servicessection">
+                                <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
+                            </Link>
+                            <Link to="/product">
+                                <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Product</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -44,8 +49,12 @@ const Banner = () => {
                         <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
                         <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
                         <div>
-                            <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
-                            <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Project</button>
+                            <Link to="/servicessection">
+                                <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
+                            </Link>
+                            <Link to="/product">
+                                <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Product</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -68,8 +77,10 @@ const Banner = () => {
                         <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
                         <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
                         <div>
-                            <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
-                            <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Project</button>
+                            <Link to="/servicessection">
+                                <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
+                            </Link>
+                            <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Product</button>
                         </div>
                     </div>
                 </div>
@@ -92,8 +103,12 @@ const Banner = () => {
                         <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
                         <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
                         <div>
-                            <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
-                            <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Project</button>
+                            <Link to="/servicessection">
+                                <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
+                            </Link>
+                            <Link to="/product">
+                                <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Product</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -116,8 +131,12 @@ const Banner = () => {
                         <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
                         <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
                         <div>
-                            <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
-                            <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Project</button>
+                            <Link to="/servicessection">
+                                <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
+                            </Link>
+                            <Link to="/product">
+                                <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Product</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -140,8 +159,12 @@ const Banner = () => {
                         <h3 className='text-6xl font-semibold max-w-sm text-white'>Affordable Price For Car Servicing</h3>
                         <p className='max-w-md text-white text-lg font-normal'>There are many variations of passages of  available, But The majority have suffered alteration in some form</p>
                         <div>
-                            <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
-                            <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Project</button>
+                            <Link to="/servicessection">
+                                <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Discover More</button>
+                            </Link>
+                            <Link to="/product">
+                                <button className="btn btn-outline text-white text-base font-semibold hover:bg-[#FF3811] hover:text-white hover:border-none">Latest Product</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

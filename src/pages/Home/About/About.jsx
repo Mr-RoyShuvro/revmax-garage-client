@@ -1,6 +1,7 @@
 import React from 'react';
 import person from '../../../assets/images/about_us/person.jpg'
 import parts from '../../../assets/images/about_us/parts.jpg'
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -19,7 +20,9 @@ const About = () => {
                     <p className="text-[#737373] text-base font-medium mb-7">
                         The majority have suffered alteration in some form, by injected <br /> humour, or randomised words which don't look even slightly <br /> believable.
                     </p>
-                    <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Get More Info</button>
+                    <Link to="/about">
+                        <button className="btn mr-5 bg-[#FF3811] text-base border-none text-white font-semibold hover:bg-[rgb(199,49,19)] hover:border-none">Get More Info</button>
+                    </Link>
                 </div>
             </div>
         </div>

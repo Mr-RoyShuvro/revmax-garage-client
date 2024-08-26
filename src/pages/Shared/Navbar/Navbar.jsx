@@ -11,7 +11,7 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/services">Services</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/product">Product</Link></li>
         <li><Link to="/contact">Contact</Link></li>
     </>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-600 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[#444] text-base font-semibold">
+                        className="menu menu-sm dropdown-content bg-gray-200 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[#444] text-base font-semibold">
                         {navItems}
                     </ul>
                 </div>
