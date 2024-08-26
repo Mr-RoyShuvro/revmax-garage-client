@@ -12,7 +12,7 @@ const ContactInfo = () => {
         <div data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
-            <div className='pt-10 pb-20'>
+            <div className='pt-10 pb-20 px-1 md:px-0'>
                 <div className='flex flex-col items-center md:flex-row gap-20 md:justify-evenly bg-[#151515]  rounded-lg py-24'>
                     <div className='flex gap-5 items-center'>
                         <FaCalendarAlt className='text-5xl text-[#FF3811]'></FaCalendarAlt>

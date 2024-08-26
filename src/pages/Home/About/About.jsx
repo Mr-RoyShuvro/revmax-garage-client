@@ -9,7 +9,7 @@ AOS.init();
 const About = () => {
     return (
         <div className="hero bg-white min-h-screen pt-32 pb-52">
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col lg:flex-row gap-24 md:gap-0">
                 <div className='lg:w-1/2 relative'>
                     <img src={person} className="w-3/4 rounded-lg shadow-2xl" />
                     <img src={parts} className="w-1/2 rounded-lg shadow-2xl border-8 border-white absolute right-5 top-2/3" />

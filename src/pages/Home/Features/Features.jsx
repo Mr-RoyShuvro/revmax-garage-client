@@ -20,41 +20,41 @@ const Features = () => {
                     </p>
                 </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
-                <div data-aos="zoom-out-up">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-6 px-2 md:px-0">
+                <div data-aos="zoom-in-up">
                     <div className="py-10 px-10 border-2 rounded-xl border-[#E8E8E8] flex flex-col justify-center items-center hover:bg-[#FF3811] group">
                         <RiTeamLine className="text-7xl text-[#FF3811] group-hover:text-white"></RiTeamLine>
-                        <h3 className="text-[#444] text-lg font-bold pt-5 group-hover:text-white">Expert Team</h3>
+                        <h3 className="text-[#444] text-base font-bold pt-5 group-hover:text-white">Expert Team</h3>
                     </div>
                 </div>
-                <div data-aos="zoom-out-up">
+                <div data-aos="zoom-in-up">
                     <div className="py-10 px-10 border-2 rounded-xl border-[#E8E8E8] flex flex-col justify-center items-center hover:bg-[#FF3811] group">
                         <GiClockwork className="text-7xl text-[#FF3811] group-hover:text-white"></GiClockwork>
-                        <h3 className="text-[#444] text-lg font-bold pt-5 group-hover:text-white">Expert Team</h3>
+                        <h3 className="text-[#444] text-base font-bold pt-5 group-hover:text-white">Timely Deliver</h3>
                     </div>
                 </div>
-                <div data-aos="zoom-out-up">
+                <div data-aos="zoom-in-up">
                     <div className="py-10 px-10 border-2 rounded-xl border-[#E8E8E8] flex flex-col justify-center items-center hover:bg-[#FF3811] group">
                         <MdContactSupport className="text-7xl text-[#FF3811] group-hover:text-white"></MdContactSupport>
-                        <h3 className="text-[#444] text-lg font-bold pt-5 group-hover:text-white">Expert Team</h3>
+                        <h3 className="text-[#444] text-base font-bold pt-5 group-hover:text-white">24/7 Support</h3>
                     </div>
                 </div>
-                <div data-aos="zoom-out-up">
+                <div data-aos="zoom-in-up">
                     <div className="py-10 px-10 border-2 rounded-xl border-[#E8E8E8] flex flex-col justify-center items-center hover:bg-[#FF3811] group">
                         <BiSolidCarMechanic className="text-7xl text-[#FF3811] group-hover:text-white"></BiSolidCarMechanic>
-                        <h3 className="text-[#444] text-lg font-bold pt-5 group-hover:text-white">Expert Team</h3>
+                        <h3 className="text-[#444] text-base font-bold pt-5 group-hover:text-white">Best Product</h3>
                     </div>
                 </div>
-                <div data-aos="zoom-out-up">
+                <div data-aos="zoom-in-up">
                     <div className="py-10 px-10 border-2 rounded-xl border-[#E8E8E8] flex flex-col justify-center items-center hover:bg-[#FF3811] group">
                         <MdOutlineSecurity className="text-7xl text-[#FF3811] group-hover:text-white"></MdOutlineSecurity>
-                        <h3 className="text-[#444] text-lg font-bold pt-5 group-hover:text-white">Expert Team</h3>
+                        <h3 className="text-[#444] text-base font-bold pt-5 group-hover:text-white">100% Guranty</h3>
                     </div>
                 </div>
-                <div data-aos="zoom-out-up">
+                <div data-aos="zoom-in-up">
                     <div className="py-10 px-10 border-2 rounded-xl border-[#E8E8E8] flex flex-col justify-center items-center hover:bg-[#FF3811] group">
                         <MdDeliveryDining className="text-7xl text-[#FF3811] group-hover:text-white"></MdDeliveryDining>
-                        <h3 className="text-[#444] text-lg font-bold pt-5 group-hover:text-white">Expert Team</h3>
+                        <h3 className="text-[#444] text-base font-bold pt-5 group-hover:text-white">Safely Deliver</h3>
                     </div>
                 </div>
             </div>

@@ -51,8 +51,8 @@ const Navbar = () => {
                 </div>
                 <Link to="/" className="btn btn-ghost h-20">
                     <div className='flex flex-col items-center'>
-                        <img className='h-11 w-16' src={logo} alt="" />
-                        <h3 className='text-[#444] font-bold text-lg'>RevMax Garage</h3>
+                        <img className='h-8 md:h-11 w-10 md:w-16' src={logo} alt="" />
+                        <h3 className='text-[#444] font-semibold md:font-bold text-sm md:text-lg'>RevMax Garage</h3>
                     </div>
                 </Link>
             </div>

@@ -26,7 +26,7 @@ const Product = () => {
 
                 {/* product-1 */}
                 <div data-aos="flip-left">
-                <div className="p-6 rounded-lg border-2 border-[#E8E8E8]">
+                <div className="p-6 rounded-lg border-2 border-[#E8E8E8] mx-5 md:mx-0">
                     <figure className='h-60 bg-[#E8E8E8] flex justify-center items-center py-8 '>
                         <img className='max-h-48' src={img1} alt="Services" />
                     </figure>
@@ -39,7 +39,7 @@ const Product = () => {
                 </div>
                 {/* product-2 */}
                 <div data-aos="flip-left">
-                <div className="p-6 rounded-lg border-2 border-[#E8E8E8]">
+                <div className="p-6 rounded-lg border-2 border-[#E8E8E8] mx-5 md:mx-0">
                     <figure className='h-60 bg-[#E8E8E8] flex justify-center items-center py-8 '>
                         <img className='max-h-48' src={img2} alt="Services" />
                     </figure>
@@ -52,7 +52,7 @@ const Product = () => {
                 </div>
                 {/* product-3 */}
                 <div data-aos="flip-left">
-                <div className="p-6 rounded-lg border-2 border-[#E8E8E8]">
+                <div className="p-6 rounded-lg border-2 border-[#E8E8E8] mx-5 md:mx-0">
                     <figure className='h-60 bg-[#E8E8E8] flex justify-center items-center py-8 '>
                         <img className='max-h-48' src={img3} alt="Services" />
                     </figure>
@@ -65,7 +65,7 @@ const Product = () => {
                 </div>
                 {/* product-4 */}
                 <div data-aos="flip-left">
-                <div className="p-6 rounded-lg border-2 border-[#E8E8E8]">
+                <div className="p-6 rounded-lg border-2 border-[#E8E8E8] mx-5 md:mx-0">
                     <figure className='h-60 bg-[#E8E8E8] flex justify-center items-center py-8 '>
                         <img className='max-h-48' src={img4} alt="Services" />
                     </figure>
@@ -78,7 +78,7 @@ const Product = () => {
                 </div>
                 {/* product-5 */}
                 <div data-aos="flip-left">
-                <div className="p-6 rounded-lg border-2 border-[#E8E8E8]">
+                <div className="p-6 rounded-lg border-2 border-[#E8E8E8] mx-5 md:mx-0">
                     <figure className='h-60 bg-[#E8E8E8] flex justify-center items-center py-8 '>
                         <img className='max-h-48' src={img5} alt="Services" />
                     </figure>
@@ -91,7 +91,7 @@ const Product = () => {
                 </div>
                 {/* product-6 */}
                 <div data-aos="flip-left">
-                <div className="p-6 rounded-lg border-2 border-[#E8E8E8]">
+                <div className="p-6 rounded-lg border-2 border-[#E8E8E8] mx-5 md:mx-0">
                     <figure className='h-60 bg-[#E8E8E8] flex justify-center items-center py-8 '>
                         <img className='max-h-48' src={img6} alt="Services" />
                     </figure>

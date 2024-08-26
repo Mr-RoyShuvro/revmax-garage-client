@@ -35,11 +35,11 @@ const SignUp = () => {
 
     return (
         <div className="min-h-screen pt-14 pb-36">
-            <div className="flex flex-col lg:flex-row items-center">
-                <div className="w-1/2 ml-20">
+            <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-0">
+                <div className="w-3/4 md:w-1/2 ml-0 md:ml-20">
                     <img src={img} alt="" />
                 </div>
-                <div className="rounded-lg w-1/2 shrink-0 px-20 border-2 border-[#D0D0D0] max-w-xl mr-20">
+                <div className="rounded-lg w-5/6 md:w-1/2 shrink-0 px-4 md:px-20 border-2 border-[#D0D0D0] max-w-xl mr-0 md:mr-20">
                     <form onSubmit={handleSignUp}>
                         <h1 className="text-4xl font-semibold text-[#444] text-center pt-12 pb-10">Sign Up</h1>
                         <div className="form-control">
