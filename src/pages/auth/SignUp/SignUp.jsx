@@ -7,10 +7,21 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 const SignUp = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, googleSignIn } = useContext(AuthContext);
 
     const location = useLocation();
     const navigate = useNavigate();
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result.user);
+                navigate(location?.state ? location?.state : "/");
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
 
     const handleSignUp = e => {
         e.preventDefault();
@@ -65,13 +76,13 @@ const SignUp = () => {
                         </div>
                         <h3 className='text-center text-[#444] text-lg font-medium py-6'>Or Sign In with</h3>
                         <div className='flex gap-4 justify-center'>
-                            <div className='rounded-full bg-[#F5F5F8] p-5'>
+                            <div onClick={handleGoogleSignIn} className='rounded-full bg-[#F5F5F8] p-5 hover:bg-[#ebebf8] hover:cursor-pointer'>
                                 <FcGoogle className='text-2xl'></FcGoogle>
                             </div>
-                            <div className='rounded-full bg-[#F5F5F8] p-5'>
+                            <div onClick={handleGoogleSignIn} className='rounded-full bg-[#F5F5F8] p-5 hover:bg-[#ebebf8] hover:cursor-pointer'>
                                 <FaFacebookF className='text-2xl text-[#3B5998]'></FaFacebookF>
                             </div>
-                            <div className='rounded-full bg-[#F5F5F8] p-5'>
+                            <div onClick={handleGoogleSignIn} className='rounded-full bg-[#F5F5F8] p-5 hover:bg-[#ebebf8] hover:cursor-pointer'>
                                 <FaLinkedinIn className='text-2xl text-[#0A66C2]'></FaLinkedinIn>
                             </div>
                         </div>

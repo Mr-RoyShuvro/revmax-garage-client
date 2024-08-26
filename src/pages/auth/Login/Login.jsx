@@ -83,10 +83,10 @@ const Login = () => {
                             <div onClick={handleGoogleSignIn} className='rounded-full bg-[#F5F5F8] p-5 hover:bg-[#ebebf8] hover:cursor-pointer'>
                                 <FcGoogle className='text-2xl'></FcGoogle>
                             </div>
-                            <div className='rounded-full bg-[#F5F5F8] p-5 hover:bg-[#ebebf8] hover:cursor-pointer'>
+                            <div onClick={handleGoogleSignIn} className='rounded-full bg-[#F5F5F8] p-5 hover:bg-[#ebebf8] hover:cursor-pointer'>
                                 <FaFacebookF className='text-2xl text-[#3B5998]'></FaFacebookF>
                             </div>
-                            <div className='rounded-full bg-[#F5F5F8] p-5 hover:bg-[#ebebf8] hover:cursor-pointer'>
+                            <div onClick={handleGoogleSignIn} className='rounded-full bg-[#F5F5F8] p-5 hover:bg-[#ebebf8] hover:cursor-pointer'>
                                 <FaLinkedinIn className='text-2xl text-[#0A66C2]'></FaLinkedinIn>
                             </div>
                         </div>
